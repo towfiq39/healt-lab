@@ -17,7 +17,7 @@ include "../db_connection.php";
 if (isset($_POST["submit"])) {
 	$mail = mysqli_real_escape_string($conn,$_POST["mail"]);
 	$password = mysqli_real_escape_string($conn,$_POST["pass"]);
-	$sql = "SELECT * FROM add_doctor WHERE doc_email= '$mail' ";
+	$sql = "SELECT * FROM add_doctor WHERE doc_email='$mail'";
 	$query = mysqli_query($conn, $sql);
 	$mail_count = mysqli_num_rows($query);
 	if ($mail_count>0) {
@@ -38,6 +38,7 @@ if (isset($_POST["submit"])) {
 }
 
 ?>
+
 	<body style="background-color: lightgrey;">
 
 		<section class="container-fluid ">

@@ -14,11 +14,11 @@
 session_start();
  include('../db_connection.php');
  if(isset($_POST["view"])){
- $appoinment_id=$_POST["appo_id"];
+     $appoinment_id=$_POST["appo_id"];
 
- $sql="select * from book_appoinment where appointment_id='$appoinment_id'";
- $query=mysqli_query($conn,$sql);
- $row=mysqli_fetch_assoc($query);
+     $sql="select * from book_appoinment where appointment_id='$appoinment_id'";
+     $query=mysqli_query($conn,$sql);
+     $row=mysqli_fetch_assoc($query);
  }
 
 if(isset($_POST["update_appo"])){

@@ -13,8 +13,9 @@ else{
 }
 
 if(isset($_POST["view"])){
-   $doc_id=$_POST["doc_id"];
-   $sql="select * from add_doctor where doc_id='  $doc_id'";
+   $d_id=$_POST["doc_id"];
+   
+   echo $sql="select * from add_doctor where doc_id='$d_id'";
    $query=mysqli_query($conn, $sql);
    $row=mysqli_fetch_assoc($query);
   
@@ -44,11 +45,10 @@ if(isset($_POST["update_doc"])){
     }
 }
 
-
 ?>
 <div class="col-lg-9">
-<h2 class="text-center bg-success text-white p-2">Add Doctor</h2>
-   
+<h2 class="text-center bg-success text-white p-2">Edit Doctor</h2>
+  
    <div class="col-lg-8 ml-8">
         <form action="" method="POST" class="p-5" style="box-shadow: 0px 7px 5px #888888;" enctype="multipart/form-data">
 
